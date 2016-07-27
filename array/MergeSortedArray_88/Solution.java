@@ -1,8 +1,5 @@
 package LeetCode.array.MergeSortedArray_88;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by Sergii on 25.07.2016.
  * 88. Merge Sorted Array
