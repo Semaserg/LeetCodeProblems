@@ -28,6 +28,8 @@ package LeetCode.tree.ConstructBinaryTreeFromInorderAndPostorderTraversal_106;
 // The the basic idea is to take the last element in postorder array as the root,
 // find the position of the root in the inorder array; then locate the range for left sub-tree and right sub-tree
 // and do recursion. Use a HashMap to record the index of root in the inorder array.
+
+// O(n*log n) time complexity, O(n) space complexity.
 public class Solution {
     public TreeNode buildTree(int[] inorder, int[] postorder) {
         if (inorder.length == 0 || postorder.length == 0 || postorder.length != inorder.length) return null;
@@ -63,6 +65,7 @@ public class Solution {
         return root;
     }
 
+    // Hashmap<value, index> can be used to make get operation in O(1) time.
     private int findIndexByValue(int[] inorder, int inorderLeftInd, int inorderRightInd, int value) {
         for(int i=inorderLeftInd; i<= inorderRightInd; i++) {
             if (inorder[i] == value) return i;
