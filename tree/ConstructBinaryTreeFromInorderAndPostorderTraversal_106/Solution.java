@@ -52,10 +52,10 @@ public class Solution {
         TreeNode root = new TreeNode(rootValue);
 
         // left tree and right tree can have different size.
-        int leftTreeSize = inorderRightInd - rootInorderInd;
+        int rightTreeSize = inorderRightInd - rootInorderInd;
 
         // last element of the left subtree. Then right subtree and root.
-        int leftSubtreePostorderRootInd = postorderRootInd-leftTreeSize-1;
+        int leftSubtreePostorderRootInd = postorderRootInd-rightTreeSize-1;
         root.left = buildTreeRecursive(inorder, postorder, inorderLeftInd, rootInorderInd-1, leftSubtreePostorderRootInd);
 
         // just before the current postorder root.
