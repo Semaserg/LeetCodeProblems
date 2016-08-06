@@ -16,6 +16,7 @@ Given s = "Hello World",
 return 5.
 */
 public class Solution {
+    // O(n)
     public int lengthOfLastWord(String s) {
         s = s.trim();
         if (s.length() == 0) return 0;
