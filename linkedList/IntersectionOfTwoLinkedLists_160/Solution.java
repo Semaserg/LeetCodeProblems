@@ -37,6 +37,7 @@ Your code should preferably run in O(n) time and use only O(1) memory.
  * }
  */
 public class Solution {
+    // Time complexity O(m+n)
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) return null;
         int lenA = getLength(headA);
