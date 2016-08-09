@@ -28,6 +28,6 @@ public class Solution {
             sb.append((char)('A' + rem));
             n=(n-1)/26;
         }
-        return sb.toString();
+        return sb.reverse().toString();
     }
 }
