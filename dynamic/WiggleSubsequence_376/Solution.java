@@ -67,13 +67,12 @@ public class Solution {
         int prev = nums[0];
         for(int i=1; i<nums.length; i++) {
             int curr = nums[i];
-            int diff = curr-prev;
-            if (diff>0 && direction>=0) {
+            if (curr>prev && direction>=0) {
                 resIndex++;
                 direction = -1;
                 // in case need to print sequence
                 //nums[resIndex] = curr;
-            } else if (diff<0 && direction<=0) {
+            } else if (curr<prev && direction<=0) {
                 resIndex++;
                 direction = 1;
                 // in case need to print sequence
