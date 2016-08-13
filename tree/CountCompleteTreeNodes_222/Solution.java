@@ -23,7 +23,8 @@ public class Solution {
     // Good solutions
     // https://discuss.leetcode.com/topic/18508/accepted-clean-java-solution/2 - good description.
     // https://discuss.leetcode.com/topic/49942/beating-99-84-submissions-in-c-quite-intuitive-and-well-commented/2 - second one.
-    // https://discuss.leetcode.com/topic/21317/accepted-easy-understand-java-solution
+    // https://discuss.leetcode.com/topic/21317/accepted-easy-understand-java-solution\
+    // Time complexity O(log n), space complexity O(1)
     public int countNodes(TreeNode root) {
         if (root == null) return 0;
         int leftHeight = getHeight(root.left);
