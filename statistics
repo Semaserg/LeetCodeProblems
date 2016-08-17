@@ -23,15 +23,21 @@ Aug
 12.08 - 374,222,50,232
 13.08 - 62,63,64,225,155
 14.08 - 144,150,71
+16.08 - 107,101,341
 
 Need attention at:
 189,289,16,216,18,153,152,128,120,34,
 106,94,6,67,227,22,234,19,160,206,24,
 143,8,9,168,303,378,222,50,232,62,63,
-155
+155,107,341
 
 Need to be done:
 90 (weird problem),76,172,198
 
 172
 http://www.geeksforgeeks.org/count-trailing-zeroes-factorial-number/
+
+To do next:
+https://leetcode.com/problems/longest-increasing-subsequence/
+http://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/
+http://www.geeksforgeeks.org/dynamic-programming-set-3-longest-increasing-subsequence/
