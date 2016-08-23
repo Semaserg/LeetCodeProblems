@@ -27,13 +27,13 @@ Aug
 17.08 - 257,98,199,173,129,74
 18.08 - 110,102,111
 22.08 - 96,191
-23.08 - 190,231
+23.08 - 190,231,169
 
 Done with help:
 189,289,16,216,18,153,152,128,120,34,
 106,94,6,67,227,22,234,19,160,206,24,
 143,8,9,168,303,378,222,50,232,62,63,
-155,107,341,96,190,231
+155,107,341,96,190,231,169
 
 Done by myself but need attention:
 304,98,74,110,191
@@ -44,10 +44,7 @@ Need to be done:
 
 To do next:
 https://leetcode.com/problems/sum-of-two-integers/
-
-https://leetcode.com/problems/majority-element/
-https://discuss.leetcode.com/topic/28601/java-solutions-sorting-hashmap-moore-voting-bit-manipulation
-https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm
+https://discuss.leetcode.com/topic/49829/share-my-c-solutions-easy-to-understand
 
 https://leetcode.com/problems/longest-increasing-subsequence/
 http://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/
