@@ -8,6 +8,7 @@ Given an array of integers, every element appears twice except for one. Find tha
 */
 public class Solution {
     //  A XOR A = 0 and the XOR operator is commutative.
+    // Time complexity O(n) space complexity O(1)
     public int singleNumber(int[] nums) {
         int temp = 0;
         for(int i : nums) {

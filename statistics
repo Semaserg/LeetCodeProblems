@@ -27,7 +27,7 @@ Aug
 17.08 - 257,98,199,173,129,74
 18.08 - 110,102,111
 22.08 - 96,191
-23.08 - 190,231,169,342,136
+23.08 - 190,231,169,342,136,112
 
 Done with help:
 189,289,16,216,18,153,152,128,120,34,
@@ -43,6 +43,11 @@ Need to be done:
 172 - http://www.geeksforgeeks.org/count-trailing-zeroes-factorial-number/
 
 To do next:
+https://leetcode.com/problems/single-number-iii/
+https://discuss.leetcode.com/topic/25382/sharing-explanation-of-the-solution
+https://discuss.leetcode.com/topic/34545/share-my-c-solution
+https://discuss.leetcode.com/topic/21605/accepted-c-java-o-n-time-o-1-space-easy-solution-with-detail-explanations
+
 https://leetcode.com/problems/sum-of-two-integers/
 https://discuss.leetcode.com/topic/49829/share-my-c-solutions-easy-to-understand
 
