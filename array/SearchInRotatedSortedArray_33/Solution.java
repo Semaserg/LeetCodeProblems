@@ -16,6 +16,7 @@ public class Solution {
     // Good solution
     // https://discuss.leetcode.com/topic/3538/concise-o-log-n-binary-search-solution
     // https://discuss.leetcode.com/topic/16580/java-ac-solution-using-once-binary-search
+    // Time complexity O(log n)
     public int search(int[] nums, int target) {
         if (nums.length == 0) return -1;
         if (nums.length == 1) {
