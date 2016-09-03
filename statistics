@@ -39,6 +39,7 @@ Aug
 Sep
 1.09 - 347,274,3,61,2
 2.09 - 147
+3.09 - 328
 
 Done with help:
 189,289,16,216,18,153,152,128,120,34,
@@ -56,6 +57,8 @@ Need to be done:
 172 - http://www.geeksforgeeks.org/count-trailing-zeroes-factorial-number/
 
 To do next:
+https://leetcode.com/problems/sort-list/
+
 https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 https://discuss.leetcode.com/topic/310/when-there-are-duplicates-the-worst-case-is-o-n-could-we-do-better/2
 
