@@ -39,7 +39,7 @@ Aug
 Sep
 1.09 - 347,274,3,61,2
 2.09 - 147
-3.09 - 328,12
+3.09 - 328,12,43
 
 Done with help:
 189,289,16,216,18,153,152,128,120,34,
@@ -50,7 +50,7 @@ Done with help:
 
 Done by myself but need attention:
 304,98,74,110,191,33,167,78,238,73,
-11,48,54,39,347,274,3,61,12
+11,48,54,39,347,274,3,61,12,43
 
 Need to be done:
 90 (weird problem),76,172,198
@@ -58,6 +58,9 @@ Need to be done:
 
 To do next:
 https://leetcode.com/problems/sort-list/
+
+https://leetcode.com/problems/count-numbers-with-unique-digits/
+https://discuss.leetcode.com/topic/47983/java-dp-o-1-solution
 
 https://leetcode.com/problems/search-in-rotated-sorted-array-ii/
 https://discuss.leetcode.com/topic/310/when-there-are-duplicates-the-worst-case-is-o-n-could-we-do-better/2
