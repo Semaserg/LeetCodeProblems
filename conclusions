@@ -1,0 +1,8 @@
+My Conclusions:
+1. If you trying to solve the issue more than 1 hour, look the best solutions.
+Mark this problem as "TODO tomorrow", and do it tomorrow.
+2. Write good examples on paper.
+3. Write good readable solution on paper. Debug it manually with tricky input.
+(for instance: list with only one item). Fix the bugs, make optimizations.
+4. Write you code in IDE, it should work from the first time!!!
+5. Write your explanation on comments, to make your solution obvious when you read it next time.
