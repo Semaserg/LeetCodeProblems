@@ -19,19 +19,17 @@ Given n = 3, there are a total of 5 unique BST's.
 
 public class Solution {
     // Good explanation
-    // https://discuss.leetcode.com/topic/37310/fantastic-clean-java-dp-solution-with-detail-explaination
     // https://discuss.leetcode.com/topic/8398/dp-solution-in-6-lines-with-explanation-f-i-n-g-i-1-g-n-i
+    // https://discuss.leetcode.com/topic/37310/fantastic-clean-java-dp-solution-with-detail-explaination
     // Time complexity O(n^2), space complexity O(n).
     public int numTrees(int n) {
         // dp - num of unique trees for 0, 1 ... n items in the tree.
         int[] dp = new int[n+1];
         dp[0] = 1;
         dp[1] = 1;
-        for (int i=2; i<=n; i++) {
-            for (int j=1; j<=i; j++){
-                dp[i] += dp[j-1] * dp[i-j];
-            }
-        }
+        for(int level = 2; level <=n; level++)
+            for(int root = 1; root<=level; root++)
+                dp[level] += dp[level-root]*dp[root-1];
         return dp[n];
     }
 //
