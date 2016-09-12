@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Queue;
 
 /*
-376. Wiggle Subsequence
-https://leetcode.com/problems/wiggle-subsequence/
+207. Course Schedule
+https://leetcode.com/problems/course-schedule/
 
 There are a total of n courses you have to take, labeled from 0 to n - 1.
 

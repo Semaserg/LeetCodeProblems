@@ -46,7 +46,7 @@ Sep
 8.09 - 382,319
 9.09 - 165
 10.09 - 208,133,103
-11.09 - 207
+11.09 - 207,210
 
 Done with help:
 189,289,16,216,18,153,152,128,120,34,
@@ -60,15 +60,13 @@ Done by myself but need attention:
 304,98,74,110,191,33,167,78,238,73,
 11,48,54,39,347,274,3,61,12,43,143,
 17,385,236,95,367,382!,208!,133!,
-103
+103,201!
 
 Need to be done:
 90 (weird problem),76,172,198
 172 - http://www.geeksforgeeks.org/count-trailing-zeroes-factorial-number/
 
 To do next:
-https://leetcode.com/problems/course-schedule/
-
 https://leetcode.com/problems/perfect-squares/
 
 https://leetcode.com/problems/range-sum-query-mutable/
