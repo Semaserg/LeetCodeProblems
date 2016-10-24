@@ -12,6 +12,7 @@ Note: You may assume that n is not less than 2 and not larger than 58.
 
 */
 // Time & space complexity O(1);
+// https://discuss.leetcode.com/topic/42978/java-dp-solution - dp solution
 public class Solution {
     public int integerBreak(int n) {
         if (n == 2) return 1;
