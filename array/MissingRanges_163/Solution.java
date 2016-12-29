@@ -14,7 +14,7 @@ import java.util.List;
  return ["2", "4->49", "51->74", "76->99"].
  */
 public class Solution {
-    public List<String> findMissingRanges2(int[] nums, int lower, int upper) {
+    public List<String> findMissingRanges(int[] nums, int lower, int upper) {
         ArrayList<String> result = new ArrayList<>();
         for (int i=0; i<=nums.length; i++) {
             int l = (i == 0) ? lower : nums[i-1]+1;
