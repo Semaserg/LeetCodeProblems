@@ -16,5 +16,9 @@ public class Main {
         List<Integer> list1 = Arrays.asList(array);
         int el = QuickSelection.getKthElement(list1, 3);
         System.out.println(el);
+
+        List<Integer> list2 = Arrays.asList(array);
+        ThreeWayPartitioning.sort(list2);
+        System.out.println(list2);
     }
 }
