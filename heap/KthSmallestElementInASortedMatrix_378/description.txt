@@ -1,0 +1,4 @@
+https://discuss.leetcode.com/topic/52948/share-my-thoughts-and-clean-java-code
+
+great java solution with heap
+I didn't catch the binary search solution

@@ -29,6 +29,9 @@ There may be multiple valid order of letters, return any one of them is fine.
 
 import java.util.*;
 
+// Great bfs solution
+// https://discuss.leetcode.com/topic/28308/java-ac-solution-using-bfs
+
 // My solution looks correct, but it fails for some test cases.
 public class Solution {
     HashMap<Character, HashSet<Character>> graph = new HashMap<>();
@@ -57,6 +60,9 @@ public class Solution {
         return res.toString();
     }
 
+    // looks like I'm wrong building the grapg
+    // I should compare the letters in two consequent words till the end of smaller one.
+    // Because of we have not info to compare the rest of the bigger word.
     void  buildGraph(ArrayList<String> words, int position) {
         if (words.isEmpty()) return;
         ArrayList<String> nextLevel = new ArrayList<>();

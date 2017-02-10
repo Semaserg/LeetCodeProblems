@@ -24,3 +24,9 @@ public class Solution {
         return false;
     }
 }
+// Great solution
+// https://discuss.leetcode.com/topic/15305/simple-java-solution
+// The basic idea is to maintain a set s which contain unique values from nums[i - k] to nums[i - 1],
+// if nums[i] is in set s then return true else update the set.
+// So we can reduce space complexity to store only k items maximum in a hashmap.
+// And we can use HashSet in this case.
