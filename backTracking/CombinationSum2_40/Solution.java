@@ -57,6 +57,7 @@ public class Solution {
     // Good solution
     // https://discuss.leetcode.com/topic/19845/java-solution-using-dfs-easy-understand/2
     // Looks like time complexity O(n^n), space complexity - O(n)
+    // https://discuss.leetcode.com/topic/44037/combination-sum-i-ii-and-iii-java-solution-see-the-similarities-yourself
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> res = new ArrayList<>();
         ArrayList<Integer> curr = new ArrayList<>();

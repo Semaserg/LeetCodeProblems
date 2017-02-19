@@ -64,7 +64,7 @@ public class Solution {
     // my bad solution
     public int calculate1(String s) {
         if (s == null) return 0;
-        s = s.trim().replaceAll(" +", "");
+        s = s.trim().replaceAll(" ", "");
         if (s.length() == 0 ) return 0;
         Stack<String> stack = new Stack<>();
         List<String> tokenList = getTokens(s);

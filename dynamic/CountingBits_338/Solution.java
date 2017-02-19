@@ -1,6 +1,8 @@
 package LeetCode.dynamic.CountingBits_338;
 
-/*
+/**
+ https://leetcode.com/problems/counting-bits/?tab=Description
+
 Given a non negative integer number num. For every numbers i in the range 0 ≤ i ≤ num calculate the number of 1's
 in their binary representation and return them as an array.
 
@@ -19,6 +21,7 @@ public class Solution {
     // HOw to calc the 1`s in int
     // Time complexity O(n)
     // https://discuss.leetcode.com/topic/40162/three-line-java-solution
+    // https://discuss.leetcode.com/topic/41785/simple-java-o-n-solution-using-two-pointers
     public int[] countBits(int num) {
         int[] result = new int[num+1];
         result[0] = 0;

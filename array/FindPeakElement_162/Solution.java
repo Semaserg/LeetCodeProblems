@@ -30,6 +30,7 @@ public class Solution {
     }
 
     // binary search, O(log n) time complexity
+    // https://discuss.leetcode.com/topic/5848/o-logn-solution-javacode
     public int findPeakElement(int[] nums) {
         int len = nums.length;
         if (len<2) return 0; // cover 0 and 1 elements in array.

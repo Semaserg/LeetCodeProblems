@@ -32,6 +32,7 @@ public class Solution {
     // https://discuss.leetcode.com/topic/57318/java-simple-recursive-solution
     // two stack solution
     // https://discuss.leetcode.com/topic/57159/simple-java-solution-using-stack
+    // https://discuss.leetcode.com/topic/57250/java-short-and-easy-understanding-solution-using-stack
     public String decodeString(String s) {
         Stack<String> stack = new Stack<>();
         int tempTimes = 0;
