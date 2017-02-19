@@ -1,7 +1,5 @@
-package LeetCode.dynamic.DesignTwitter_355;
+package LeetCode.design.DesignTwitter_355;
 
-
-import javafx.util.Pair;
 
 import java.util.*;
 

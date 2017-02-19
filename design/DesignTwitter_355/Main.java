@@ -1,4 +1,4 @@
-package LeetCode.dynamic.DesignTwitter_355;
+package LeetCode.design.DesignTwitter_355;
 
 import java.util.List;
 
