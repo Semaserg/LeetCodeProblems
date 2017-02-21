@@ -10,7 +10,7 @@ import java.util.List;
 39. Combination Sum
 https://leetcode.com/problems/combination-sum/
 
-Given a set of candidate numbers (C) and a target number (T),
+Given a set (SET MEANS UNIQUE!!!! NO DUPLICATES!!!!) of candidate numbers (C) and a target number (T),
 find all unique combinations in C where the candidate numbers sums to T.
 
 The same repeated number may be chosen from C unlimited number of times.
@@ -21,6 +21,8 @@ The solution set must not contain duplicate combinations.
 For example, given candidate set [2, 3, 6, 7] and target 7,
 */
 public class Solution {
+    // https://discuss.leetcode.com/topic/14654/accepted-16ms-c-solution-use-backtracking-easy-understand
+    //
     // Good solution
     // https://discuss.leetcode.com/topic/6431/concise-backtracking-solution
     // Time complexity O(n^n), space complexity - ???
