@@ -24,6 +24,16 @@ import java.util.List;
 
  https://discuss.leetcode.com/topic/45893/c-hash-table-solution-and-sort-two-pointers-solution-with-time-and-space-complexity
  time complexity O(log n + log m + m + n) - I`m not really sure
+
+ https://discuss.leetcode.com/topic/45992/solution-to-3rd-follow-up-question
+ If only nums2 cannot fit in memory, put all elements of nums1 into a HashMap,
+ read chunks of array that fit into the memory, and record the intersections.
+
+ If both nums1 and nums2 are so huge that neither fit into the memory,
+ sort them individually (external sort), then read 2 elements from each
+ array at a time in memory, record intersections.
+
+ https://discuss.leetcode.com/topic/45920/ac-solution-using-java-hashmap
  */
 public class Solution {
     public int[] intersect(int[] nums1, int[] nums2) {
