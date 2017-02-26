@@ -25,7 +25,7 @@ public class Solution {
 
     // My stupid solution
     // Time complexity O(log n + log m), space complexity O(1).
-    public boolean searchMatrix(int[][] matrix, int target) {
+    public boolean searchMatrix1(int[][] matrix, int target) {
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
             return false;
         }
@@ -58,6 +58,24 @@ public class Solution {
             if (array[mid] == target) return true;
             if (target < array[mid]) hi = mid - 1;
             else if (target > array[mid]) lo = mid + 1;
+        }
+        return false;
+    }
+
+    // https://discuss.leetcode.com/topic/4846/binary-search-on-an-ordered-matrix
+    // https://discuss.leetcode.com/topic/3227/don-t-treat-it-as-a-2d-matrix-just-treat-it-as-a-sorted-list
+    public boolean searchMatrix(int[][] matrix, int target) {
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) return false;
+        int row_num = matrix.length;
+        int col_num = matrix[0].length;
+
+        int l = 0, r = row_num * col_num -1;
+        while (l<=r) {
+            int mid = l + (r - l)/2;
+            int curr = matrix[mid/col_num][mid%col_num];
+            if (curr == target) return true;
+            if (curr < target) l = mid + 1;
+            else r = mid - 1;
         }
         return false;
     }

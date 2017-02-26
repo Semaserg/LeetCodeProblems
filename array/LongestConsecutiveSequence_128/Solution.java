@@ -41,6 +41,8 @@ public class Solution {
     }
 
     // O(n) time complexity
+    // https://discuss.leetcode.com/topic/15383/simple-o-n-with-explanation-just-walk-each-streak
+    // https://discuss.leetcode.com/topic/25493/simple-fast-java-solution-using-set
     public int longestConsecutive(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for(int num : nums) {
