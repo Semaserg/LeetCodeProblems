@@ -5,8 +5,8 @@ import javafx.util.Pair;
 import java.util.*;
 
 /*
-207. Course Schedule
-https://leetcode.com/problems/course-schedule/
+261. Graph Valid Tree
+https://leetcode.com/problems/graph-valid-tree/?tab=Description
 
 Given n nodes labeled from 0 to n - 1 and a list of undirected edges
 (each edge is a pair of nodes), write a function to check whether these

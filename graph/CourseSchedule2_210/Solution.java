@@ -71,7 +71,8 @@ public class Solution {
             if (!dfs(i, queue, graph, visited, recStack)) {
                 return new int[]{};
             }
-            // strange, but it works without in-degree calculation
+            // it works without in-degree calculation. We need indegree calculation for BFS (Khan alg), not fr DFS.
+            // DFS is the postorder traversal in revers order.
             // The first vertex in topological sorting is always a vertex with in-degree as 0 (a vertex with no in-coming edges).
 //            if (indegrees[i] == 0) {
 //                boolean noCycles = dfs(i, queue, graph, visited, recStack);
@@ -81,6 +82,8 @@ public class Solution {
 
         int[] result = new int[numCourses];
         for(int i=0; i<numCourses; i++){
+            // here is no revense order because I'm building the graph in wrong way.
+            // from and to need to be swapped.
             result[i] = queue.poll();
         }
         return result;
@@ -102,7 +105,7 @@ public class Solution {
             else if (recStack[n]) return false;
         }
 
-        queue.add(current);
+        queue.add(current); // Postorder traversal
         recStack[current] = false;
         return true;
     }
@@ -138,6 +141,8 @@ public class Solution {
 
         int[] result = new int[numCourses];
         for(int i=0; i<numCourses; i++){
+            // here is I use reverse order because of the bug in building the graph
+            // from and to need to be swapped.
             result[i] = stack.pop();
         }
         return result;
