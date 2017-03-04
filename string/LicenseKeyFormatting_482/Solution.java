@@ -38,19 +38,17 @@ String S is non-empty.
 public class Solution {
     public String licenseKeyFormatting(String S, int K) {
         StringBuilder sb = new StringBuilder();
-        char[] arr = S.toCharArray();
-        int cnt = 0;
-        for (int i= arr.length-1; i >= 0; i--) {
-            char curr = arr[i];
+        int cnt = K;
+        for (int i= S.length()-1; i >= 0; i--) {
+            char curr = S.charAt(i);
             if (curr == '-') continue;
-            sb.insert(0, Character.toUpperCase(curr));
-            cnt++;
-            if (cnt == K) {
+            if (cnt == 0) {
                 sb.insert(0, '-');
-                cnt = 0;
+                cnt = K;
             }
+            cnt--;
+            sb.insert(0, Character.toUpperCase(curr));
         }
-        if(sb.length() > 0 && sb.charAt(0) == '-') sb.deleteCharAt(0);
         return sb.toString();
     }
 }
