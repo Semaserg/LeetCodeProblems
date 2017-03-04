@@ -44,7 +44,7 @@ public class Solution {
         return Math.max(max, right-left);
     }
 
-    // Time complexity O(n), space complexity O(1)
+    // Time complexity O(n), space complexity O(n)
     // https://discuss.leetcode.com/topic/8232/11-line-simple-java-solution-o-n-with-explanation
     // https://discuss.leetcode.com/topic/24739/c-code-in-9-lines
     public int lengthOfLongestSubstring(String s) {

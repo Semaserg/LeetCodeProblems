@@ -15,6 +15,7 @@ Note:
 Each element in the result must be unique.
 The result can be in any order.
 */
+// https://discuss.leetcode.com/topic/45685/three-java-solutions
 public class Solution {
     public int[] intersection(int[] nums1, int[] nums2) {
         HashSet<Integer> set = new HashSet<>();

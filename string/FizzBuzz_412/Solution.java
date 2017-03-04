@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /*
-387. First Unique Character in a String
-https://leetcode.com/problems/first-unique-character-in-a-string/
+412. Fizz Buzz
+https://leetcode.com/problems/fizz-buzz/?tab=Description
 
 Write a program that outputs the string representation of numbers from 1 to n.
 
