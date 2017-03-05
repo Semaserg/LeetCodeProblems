@@ -65,6 +65,7 @@ public class Solution {
     // Time complexity O(4n) => O(n) because of we should do push-pop with temp, and then push pop with orig.
     // Time complexity O(2n) => O(n) - temp stack + orig stack size. 2 - because of null markers.
     // Great solution
+    // https://discuss.leetcode.com/topic/54270/an-java-iterative-solution/2
     // https://discuss.leetcode.com/topic/54904/c-non-recursive-one-pass-solution-using-stack-a-possible-implementation-of-nestedinteger
     // https://discuss.leetcode.com/topic/54270/an-java-iterative-solution
     public NestedInteger deserialize(String s) {

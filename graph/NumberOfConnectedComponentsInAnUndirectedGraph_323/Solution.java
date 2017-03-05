@@ -2,9 +2,9 @@ package LeetCode.graph.NumberOfConnectedComponentsInAnUndirectedGraph_323;
 
 import java.util.*;
 
-/*
-310. Minimum Height Trees
-https://leetcode.com/problems/minimum-height-trees/
+/**
+ 323. Number of Connected Components in an Undirected Graph
+https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/?tab=Description
 
 Given n nodes labeled from 0 to n - 1 and a list of undirected edges
 (each edge is a pair of nodes), write a function to find the number
@@ -31,6 +31,7 @@ not appear together in edges.
 public class Solution {
 
     // Union-Find method
+    // https://discuss.leetcode.com/topic/32752/easiest-2ms-java-solution
     // Time complexity - O(n) (thx to path compression, with no path compression it is O(n^2) )
     // Space complexity O(1)
     // http://www.geeksforgeeks.org/union-find/
