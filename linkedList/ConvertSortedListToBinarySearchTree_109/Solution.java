@@ -26,7 +26,7 @@ in ascending order, convert it to a height balanced BST.
  * }
  */
 // Time complexity O(n), space complexity O(log n) because of recursion stack
-// http://articles.leetcode.com/convert-sorted-list-to-balanced-binary
+// http://articles.leetcode.com/convert-sorted-list-to-balance  d-binary
 // https://discuss.leetcode.com/topic/3286/share-my-code-with-o-n-time-and-o-1-space
 // https://discuss.leetcode.com/topic/8141/share-my-o-1-space-and-o-n-time-java-code
 public class Solution {

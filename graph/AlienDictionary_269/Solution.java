@@ -37,7 +37,7 @@ public class Solution {
     HashMap<Character, HashSet<Character>> graph = new HashMap<>();
     HashMap<Character,Integer> inDegree = new HashMap<>();
 
-    public String alienOrder(String[] words) {
+    public String alienOrder1(String[] words) {
         if (words == null || words.length == 0) return "";
 
         ArrayList<String> allWords = new ArrayList<>(Arrays.asList(words));
@@ -127,4 +127,57 @@ public class Solution {
         return true;
     }
 
+    // Khan alg
+    // https://en.wikipedia.org/wiki/Topological_sorting
+    // https://discuss.leetcode.com/topic/28308/java-ac-solution-using-bfs
+    String alienOrder(String[] words) {
+        HashMap<Character, Set<Character>> graph = new HashMap<>();
+        HashMap<Character, Integer> degree = new HashMap<>();
+
+        if (words == null || words.length <= 1) return "";
+
+        for (int i=0; i<words.length-1; i++) {
+            char[] prevWord = words[i].toCharArray();
+            char[] nextWord = words[i+1].toCharArray();
+            int len = Math.min(prevWord.length, nextWord.length);
+            for(int j = 0; j<len; j++) {
+                char prev = prevWord[j];
+                char next = nextWord[j];
+
+                // init structure
+                if (!graph.containsKey(prev)) graph.put(prev, new HashSet<>());
+                if (!graph.containsKey(next)) graph.put(next, new HashSet<>());
+                if (!degree.containsKey(prev)) degree.put(prev, 0);
+                if (!degree.containsKey(next)) degree.put(next, 0);
+
+                // no data to compare the characters
+                if (prev == next) continue;
+
+                // increase in-degree for the next char
+                // if it is not done yet
+                if (!graph.get(prev).contains(next)) {
+                    graph.get(prev).add(next);
+                    degree.put(next, degree.get(next) + 1);
+                }
+            }
+        }
+
+        Queue<Character> q = new LinkedList<>();
+        for(char c : degree.keySet()) {
+            if (degree.get(c) == 0) q.add(c);
+        }
+
+        StringBuilder res = new StringBuilder();
+        while (!q.isEmpty()) {
+            char curr = q.remove();
+            res.append(curr);
+            Set<Character> nextChars = graph.get(curr);
+            for (char c : nextChars) {
+                degree.put(c, degree.get(c)-1); // decrease degree
+                if (degree.get(c) == 0) q.add(c);
+            }
+        }
+        if (res.length() != degree.size()) return "";
+        return res.toString();
+    }
 }
