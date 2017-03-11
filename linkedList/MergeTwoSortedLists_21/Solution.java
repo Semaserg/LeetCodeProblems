@@ -20,6 +20,7 @@ public class Solution {
 
 
     // Time complexity O(n+m), n - l1 len, m - l2 len.
+    // https://discuss.leetcode.com/topic/4480/clean-simple-o-n-m-c-solution-without-dummy-head-and-recurtion
     // Great recursive solution
     // https://discuss.leetcode.com/topic/45002/java-1-ms-4-lines-codes-using-recursion
     // https://discuss.leetcode.com/topic/5513/my-recursive-way-to-solve-this-problem-java-easy-understanding

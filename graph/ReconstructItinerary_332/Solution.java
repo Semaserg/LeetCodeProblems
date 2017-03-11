@@ -2,9 +2,9 @@ package LeetCode.graph.ReconstructItinerary_332;
 
 import java.util.*;
 
-/*
-310. Minimum Height Trees
-https://leetcode.com/problems/minimum-height-trees/
+/**
+332. Reconstruct Itinerary
+ https://leetcode.com/problems/reconstruct-itinerary/?tab=Description
 
 Given a list of airline tickets represented by pairs of departure and arrival airports
 [from, to], reconstruct the itinerary in order. All of the tickets belong to a man who
