@@ -29,6 +29,7 @@ public class Solution {
     // Set of solutions
     // https://discuss.leetcode.com/topic/58301/simple-reservoir-sampling-solution
     // https://discuss.leetcode.com/topic/58322/what-on-earth-is-meant-by-too-much-memory
+    // http://articles.leetcode.com/rejection-sampling/ - similar task, Rejection sampling
     public Solution(int[] nums) {
         this.nums = nums;
         this.rnd = new Random();
