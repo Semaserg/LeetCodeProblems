@@ -1,12 +1,12 @@
 package LeetCode.binarySearch.Sqrt_69;
 
-/*
+/**
+https://leetcode.com/problems/sqrtx/#/description
 69. Sqrt(x)
 https://leetcode.com/problems/sqrtx/
 
 Implement int sqrt(int x).
 */
-
 
 // Great solution
 // https://discuss.leetcode.com/topic/24532/3-4-short-lines-integer-newton-every-language
