@@ -17,6 +17,9 @@ import java.util.List;
  [1,3,3,1],
  [1,4,6,4,1]
  ]
+ https://en.wikipedia.org/wiki/Pascal's_triangle
+ https://discuss.leetcode.com/topic/5128/solution-in-java
+ https://discuss.leetcode.com/topic/6805/my-concise-solution-in-java
  */
 public class Solution {
     private void generateRecursive(List<List<Integer>> arr, int num) {

@@ -94,7 +94,7 @@ public class Solution {
 
         // add fractional part
         result.append(".");
-        HashMap<Long, Integer> map = new HashMap<>(); // Map<reminder, position in string builder>
+        HashMap<Long, Integer> map = new HashMap<>(); // Map<remainder, position in string builder>
         map.put(n, result.length());
         while (n != 0) {
             n *= 10;

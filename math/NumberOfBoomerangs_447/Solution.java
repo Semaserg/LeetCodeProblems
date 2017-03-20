@@ -37,6 +37,8 @@ public class Solution {
             HashMap<Integer, Integer> dist = new HashMap<>(); // <distance, counter>
             for (int[] sp : points) {
                 if (fp == sp) continue;
+                // http://www.mathwarehouse.com/algebra/distance_formula/index.php
+                // dist = sqrt( (x1 - x2)^2 + (y1 - y2)^2 )
                 int squareDistance = (fp[0]-sp[0])*(fp[0]-sp[0]) + (fp[1]-sp[1])*(fp[1]-sp[1]);
                 if (!dist.containsKey(squareDistance)) {
                     dist.put(squareDistance, 1);
