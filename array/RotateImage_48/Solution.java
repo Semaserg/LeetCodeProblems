@@ -3,8 +3,8 @@ package LeetCode.array.RotateImage_48;
 import java.util.Arrays;
 
 /*
- 27. Remove Element
- https://leetcode.com/problems/rotate-image/
+ 48. Rotate Image
+ https://leetcode.com/problems/rotate-image/#/description
 
  You are given an n x n 2D matrix representing an image.
 

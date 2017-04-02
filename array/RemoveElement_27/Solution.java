@@ -20,6 +20,9 @@ import java.util.List;
  Your function should return length = 2, with the first two elements of nums being 2.
  */
 public class Solution {
+    // Good solution
+    // use two pointers: straight and conditional.
+    //https://discuss.leetcode.com/topic/1228/my-solution-for-your-reference
     public int removeElement(int[] nums, int val) {
         int last = nums.length - 1;
         for(int i = nums.length-1; i>=0; i--) {

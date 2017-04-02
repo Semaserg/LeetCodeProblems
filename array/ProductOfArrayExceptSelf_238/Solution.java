@@ -44,6 +44,7 @@ public class Solution {
     }
 
     // Good solution with explanation
+    // https://discuss.leetcode.com/topic/22301/my-solution-beats-100-java-solutions
     // https://discuss.leetcode.com/topic/41177/my-one-pass-java-solution-without-extra-spaces
     public int[] productExceptSelf(int[] nums) {
         int len = nums.length;
