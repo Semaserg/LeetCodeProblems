@@ -43,6 +43,7 @@ public class Solution {
 
     //https://discuss.leetcode.com/topic/5891/clean-iterative-solution-with-two-binary-searches-with-explanation
     // use binary search two times for upper and lower bound.
+    // https://discuss.leetcode.com/topic/6327/a-very-simple-java-solution-with-only-one-binary-search-algorithm
     public int[] searchRange(int[] nums, int target) {
         int[] res = {-1,-1};
         if (nums.length==0) return res;

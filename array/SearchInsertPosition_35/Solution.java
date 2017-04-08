@@ -15,6 +15,7 @@ package LeetCode.array.SearchInsertPosition_35;
  [1,3,5,6], 7 → 4
  [1,3,5,6], 0 → 0
  */
+// https://discuss.leetcode.com/topic/7874/my-8-line-java-solution
 public class Solution {
     public int searchInsert(int[] nums, int target) {
         int left = 0;

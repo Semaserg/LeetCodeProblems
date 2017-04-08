@@ -23,6 +23,7 @@ public class Solution {
     // 2. (nums[lo] <= nums[mid]) - left part is sorted. if ( left <= target <= mid) - search in this part.
     // (nums[mid] <= nums[hi]) - right part is sorted. if ( mid <= target <= right) - search in this part.
     // 3. if target in not sorted part (with pivot somewhere inside) => check right and dec it, check left and inc it.
+    // https://discuss.leetcode.com/topic/16660/my-8ms-c-solution-o-logn-on-average-o-n-worst-case
     public boolean search(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
             return false;
