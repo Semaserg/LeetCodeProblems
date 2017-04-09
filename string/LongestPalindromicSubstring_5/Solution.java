@@ -20,6 +20,7 @@ public class Solution {
     // https://habrahabr.ru/post/276195/
     // http://e-maxx.ru/algo/palindromes_count
     // http://www.geeksforgeeks.org/longest-palindromic-substring-set-2/
+    // https://discuss.leetcode.com/topic/23498/very-simple-clean-java-solution
     public String longestPalindrome1(String s) {
         if (s == null || s.length() <= 1) return s;
         int start = 0, end = 0;

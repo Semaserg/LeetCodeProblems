@@ -43,6 +43,8 @@ Time complexity required: O(n) where n is the size of the input string.
 
 Notice that a/aa/aaa/file1.txt is not the longest file path, if there is another path aaaaaaaaaaaaaaaaaaaaa/sth.png.
 */
+// https://discuss.leetcode.com/topic/55247/9-lines-4ms-java-solution
+// https://discuss.leetcode.com/topic/55088/java-o-n-solution-using-stack
 public class Solution {
     public int lengthLongestPath(String input) {
         if (input == null || input.isEmpty()) return 0;
