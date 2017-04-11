@@ -21,6 +21,7 @@ Return: 1 --> 2 --> 3 --> 4 --> 5
  */
 public class Solution {
     // Time complexity O(n)
+    // https://discuss.leetcode.com/topic/12580/3-line-recursive-solution
     public ListNode removeElements(ListNode head, int val) {
         if (head == null) return null;
         ListNode newHead = new ListNode(-1);

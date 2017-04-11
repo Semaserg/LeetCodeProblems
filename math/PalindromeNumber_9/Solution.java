@@ -41,6 +41,7 @@ public class Solution {
 
     // Great solution
     // https://discuss.leetcode.com/topic/8090/9-line-accepted-java-code-without-the-need-of-handling-overflow
+    // https://discuss.leetcode.com/topic/12820/an-easy-c-8-lines-code-only-reversing-till-half-and-then-compare
     public boolean isPalindrome(int x) {
         if (x<0 || (x!=0 && x%10==0)) return false;
         int rev = 0; // contains second half

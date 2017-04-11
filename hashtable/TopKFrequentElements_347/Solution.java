@@ -29,7 +29,7 @@ public class Solution {
 //        PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =
 //                new PriorityQueue<>((a,b)->(b.getValue()-a.getValue()));
 
-        PriorityQueue<MyEntry> heap = new PriorityQueue<MyEntry>(new MyComparator());
+        PriorityQueue<MyEntry> heap = new PriorityQueue<>((a,b)-> b.count - a.count);
         for (int key : map.keySet()) {
             heap.add(new MyEntry(key, map.get(key)));
         }

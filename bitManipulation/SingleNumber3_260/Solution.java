@@ -28,7 +28,7 @@ public class Solution {
         }
         int[] result = new int[] {xorOfTwoTargetNums, xorOfTwoTargetNums};
         // for instance:
-        // xorOfTwoTargetNums == 0111000  =>
+        // xorOfTwoTargetNums   == 0111000  =>
         // xorOfTwoTargetNums-1 == 0110111
         // from left to right: before first 1 is the same (prefix), 0 instead of 1 (target bit) , 1s instead of 0s at the end (suffix);
         // ~(xorOfTwoTargetNums - 1 = 1001000 - inverted prefix (with & gives 0s), target == 1 in both, suffix = 0s.
