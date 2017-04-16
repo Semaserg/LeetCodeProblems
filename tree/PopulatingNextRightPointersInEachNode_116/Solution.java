@@ -50,6 +50,7 @@ import java.util.Queue;
  */
 public class Solution {
 
+    // https://discuss.leetcode.com/topic/6221/java-solution-with-o-1-memory-o-n-time
     // BFS solution
     // this solution is not eligible because we use Queue.
     // From the problem "You may only use constant extra space."

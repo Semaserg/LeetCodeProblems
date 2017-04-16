@@ -28,6 +28,7 @@ import java.util.List;
 // Great bit manipulation solution.
 // https://discuss.leetcode.com/topic/2764/my-solution-using-bit-manipulation
 // https://discuss.leetcode.com/topic/19110/c-recursive-iterative-bit-manipulation-solutions-with-explanations
+// https://en.wikipedia.org/wiki/Combination
 public class Solution {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
