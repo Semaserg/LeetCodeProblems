@@ -59,7 +59,7 @@ public class Solution {
 //
 //    For the kth level:
 //    minpath[i] = min( minpath[i], minpath[i+1]) + triangle[k][i];
-    public int minimumTotal(List<List<Integer>> triangle) {
+    public int minimumTotal2(List<List<Integer>> triangle) {
         if (triangle.size()==1) return triangle.get(0).get(0);
 
         // copy last row to the path array.
@@ -78,5 +78,16 @@ public class Solution {
             rowPath.remove(rowPath.size()-1);
         }
         return rowPath.get(0);
+    }
+
+    // time limit exceeded
+    public int minimumTotal(List<List<Integer>> triangle) {
+        //if (triangle.size()==1) return triangle.get(0).get(0);
+        return getMin(0,0,triangle);
+    }
+
+    private int getMin(int row, int col, List<List<Integer>> triangle) {
+        if (row >= triangle.size() || col>= triangle.get(row).size()) return 0;
+        return triangle.get(row).get(col) + Math.min(getMin(row+1, col, triangle), getMin(row+1, col+1, triangle));
     }
 }
