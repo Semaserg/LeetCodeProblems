@@ -1,4 +1,4 @@
-package LeetCode.array.Subsets2_90;
+package LeetCode.backTracking.Subsets2_90;
 
 import java.util.*;
 
@@ -31,7 +31,7 @@ public class Solution {
     // for instance, currently in res = [ [], [1] ], nums = [1,2,2], so count = 2 =>
     // we should add for [] array - [2], [2,2],
     // for [1] array - [1,2], [1,2,2].
-    public List<List<Integer>> subsetsWithDup(int[] nums) {
+    public List<List<Integer>> subsetsWithDup1(int[] nums) {
         if (nums == null || nums.length == 0) {
             return new ArrayList<>();
         }
@@ -59,5 +59,31 @@ public class Solution {
             }
         }
         return res;
+    }
+
+
+    // https://discuss.leetcode.com/topic/22638/very-simple-and-fast-java-solution
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        List<List<Integer>> result = new ArrayList<>();
+        if (nums == null || nums.length == 0) {
+            return result;
+        }
+        List<Integer> curr = new ArrayList<>();
+        Arrays.sort(nums);
+        bt(result, curr, 0, nums);
+        return result;
+    }
+
+    private void bt(List<List<Integer>> res, List<Integer> curr, int index, int[] nums) {
+        res.add(new ArrayList<>(curr));
+        if (index >= nums.length) return;
+        int i = index;
+        while (i<nums.length) {
+            curr.add(nums[i]);
+            bt(res, curr, i+1, nums);
+            curr.remove(curr.size()-1);
+            i++;
+            while (i>0 && i<nums.length && nums[i] == nums[i-1]) i++;
+        }
     }
 }
