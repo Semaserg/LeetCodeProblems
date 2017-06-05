@@ -13,6 +13,7 @@ Given 1->2->3->4->5->NULL, m = 2 and n = 4,
 return 1->4->3->2->5->NULL.
 */
 
+// https://discuss.leetcode.com/topic/8976/simple-java-solution-with-clear-explanation
 public class Solution {
     public ListNode reverseBetween(ListNode head, int m, int n) {
         if (head == null || head.next == null || m == n) return head;

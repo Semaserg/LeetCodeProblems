@@ -63,6 +63,16 @@ public class Solution {
         return result;
     }
 
+    public int thirdMax2(int[] nums) {
+        Integer first = getMaxLowerThan(nums, null);
+        if (first == null) return 0;
+        Integer second = getMaxLowerThan(nums, first);
+        if (second == null) return first;
+        Integer third = getMaxLowerThan(nums, second);
+        if (third == null) return first;
+        return third;
+    }
+
     public int thirdMax(int[] nums) {
         Integer first = getMaxLowerThan(nums, null);
         if (first == null) return 0;
