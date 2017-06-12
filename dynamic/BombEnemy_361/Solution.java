@@ -16,6 +16,7 @@ E 0 W E
 0 E 0 0
 
 return 3. (Placing a bomb at (1,1) kills 3 enemies)*/
+// https://discuss.leetcode.com/topic/48603/java-straightforward-solution-dp-o-mn-time-and-space
 public class Solution {
     public int maxKilledEnemies(char[][] grid) {
         if (grid == null || grid.length == 0 || grid[0].length == 0) return 0;
