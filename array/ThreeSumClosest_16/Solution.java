@@ -16,7 +16,7 @@ import java.util.Arrays;
  */
 public class Solution {
 
-    // O(n^2) solution
+    // O(n^3) solution
     public int threeSumClosest1(int[] nums, int target) {
         if (nums.length < 4) {
             int res = 0;

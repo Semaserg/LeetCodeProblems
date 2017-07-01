@@ -22,6 +22,8 @@ public class Solution {
     // Time complexity O(n), space complexity O(1);
     // Binary search O(n*log n) time complexity.
     // https://discuss.leetcode.com/topic/7465/a-less-efficient-way-binary-search
+    // 3 cool solutions
+    //https://discuss.leetcode.com/topic/21800/python-different-solutions-two-pointer-dictionary-binary-search
     public int[] twoSum(int[] numbers, int target) {
         if (numbers == null || numbers.length < 3) return new int[]{};
         int i = 0, j = numbers.length-1;
