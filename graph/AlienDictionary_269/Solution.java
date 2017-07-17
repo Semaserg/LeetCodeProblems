@@ -127,7 +127,7 @@ public class Solution {
         return true;
     }
 
-    // Khan alg
+    // Kahn alg
     // https://en.wikipedia.org/wiki/Topological_sorting
     // https://discuss.leetcode.com/topic/28308/java-ac-solution-using-bfs
     String alienOrder(String[] words) {

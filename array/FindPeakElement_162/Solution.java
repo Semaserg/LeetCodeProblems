@@ -30,6 +30,29 @@ public class Solution {
     }
 
     // binary search, O(log n) time complexity
+    // https://discuss.leetcode.com/topic/5724/find-the-maximum-by-binary-search-recursion-and-iteration
+    /*
+    class Solution {
+        public:
+            int findPeakElement(const vector<int> &num)
+            {
+                int low = 0;
+                int high = num.size()-1;
+
+                while(low < high)
+                {
+                    int mid1 = (low+high)/2;
+                    int mid2 = mid1+1;
+                    if(num[mid1] < num[mid2])
+                        low = mid2;
+                    else
+                        high = mid1;
+                }
+                return low;
+            }
+        };
+    */
+
     // https://discuss.leetcode.com/topic/5848/o-logn-solution-javacode
     public int findPeakElement(int[] nums) {
         int len = nums.length;

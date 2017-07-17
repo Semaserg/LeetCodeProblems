@@ -4,8 +4,10 @@ package LeetCode.dynamic.BombEnemy_361;
 https://leetcode.com/problems/bomb-enemy/#/description
 361. Bomb Enemy
 
-Given a 2D grid, each cell is either a wall 'W', an enemy 'E' or empty '0' (the number zero), return the maximum enemies you can kill using one bomb.
-The bomb kills all the enemies in the same row and column from the planted point until it hits the wall since the wall is too strong to be destroyed.
+Given a 2D grid, each cell is either a wall 'W', an enemy 'E' or empty '0' (the number zero),
+return the maximum enemies you can kill using one bomb.
+The bomb kills all the enemies in the same row and column from the planted point until it hits
+the wall since the wall is too strong to be destroyed.
 Note that you can only put the bomb at an empty cell.
 
 Example:
@@ -61,7 +63,7 @@ public class Solution {
 }
 //class Spot {
 //    public int up; // enemies that can be destroyed up + current cell enemy;
-//    public int bottom; // enemies that can be destroyed to the bottom;
+//    public int bottom; // enemies that can be destroyed to the bottom  + current cell enemy;
 //    public int left; // enemies that can be destroyed to the left + current cell enemy;
-//    public int right; // enemies that can be destroyed to the right;
+//    public int right; // enemies that can be destroyed to the right  + current cell enemy;
 //}
