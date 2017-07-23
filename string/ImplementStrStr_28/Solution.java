@@ -9,6 +9,8 @@ Implement strStr().
 Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 */
 public class Solution {
+    // Good solution
+    // https://discuss.leetcode.com/topic/18839/elegant-java-solution
     // n - haystack length, m - needle length;
     // Time complexity O(n*m) space complexity just for init data - O(n*m)
     public int strStr1(String haystack, String needle) {
