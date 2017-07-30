@@ -35,8 +35,9 @@ public class Solution extends Reader4 {
             if (wasRead < PART_LEN) {
                 eof = true;
             }
-            counter += wasRead;
-            System.arraycopy(buffer, 0, buf, offset, wasRead);
+            int bytes = Math.min(wasRead, n-counter);
+            System.arraycopy(buffer, 0, buf, offset, bytes);
+            counter += bytes;
             offset += PART_LEN;
         }
         return counter;
