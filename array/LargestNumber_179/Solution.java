@@ -15,7 +15,7 @@ import java.util.Arrays;
  Note: The result may be very large, so you need to return a string instead of an integer.
 
  Credits:
- Special thanks to @ts for adding this problem and creating all test cases.
+ Special thanks to @ts for adding this problem and creating all Snake_3 cases.
  */
 // https://discuss.leetcode.com/topic/7235/my-3-lines-code-in-java-and-python
 // https://discuss.leetcode.com/topic/8018/my-java-solution-to-share

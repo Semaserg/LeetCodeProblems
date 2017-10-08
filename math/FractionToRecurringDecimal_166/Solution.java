@@ -23,7 +23,7 @@ Hint:
 
 No scary math, just apply elementary math knowledge. Still remember how to perform a long division?
 Try a long division on 4/9, the repeating part is obvious. Now try 4/333. Do you see a pattern?
-Be wary of edge cases! List out as many test cases as you can think of and test your code thoroughly.
+Be wary of edge cases! List out as many Snake_3 cases as you can think of and Snake_3 your code thoroughly.
 */
 public class Solution {
 

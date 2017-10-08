@@ -22,7 +22,7 @@ then the reverse of 1000000003 overflows. How should you handle such cases?
 For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows.
 
 Update (2014-11-10):
-Test cases had been added to test the overflow behavior.
+Test cases had been added to Snake_3 the overflow behavior.
 */
 public class Solution {
     // Time complexity O(n), n - str len of the x.

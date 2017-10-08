@@ -32,7 +32,7 @@ import java.util.*;
 // Great bfs solution
 // https://discuss.leetcode.com/topic/28308/java-ac-solution-using-bfs
 
-// My solution looks correct, but it fails for some test cases.
+// My solution looks correct, but it fails for some Snake_3 cases.
 public class Solution {
     HashMap<Character, HashSet<Character>> graph = new HashMap<>();
     HashMap<Character,Integer> inDegree = new HashMap<>();

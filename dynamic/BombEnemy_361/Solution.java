@@ -29,7 +29,7 @@ public class Solution {
             for (int j=0; j<n; j++) {
                 spots[i][j] = new Spot();
                 // leave counters 0 for wall cell.
-                // Wall works like a stopper for cumulation of enemies - it's counters == 0,
+                // WALL works like a stopper for cumulation of enemies - it's counters == 0,
                 // so increasing of counters starts from 0
                 if (grid[i][j] == 'W') continue;
                 int currCellEnemy = (grid[i][j] == 'E') ? 1 : 0;

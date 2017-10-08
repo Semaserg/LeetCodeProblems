@@ -13,7 +13,7 @@ By using the read4 API, implement the function int read(char *buf, int n)
 that reads n characters from the file.
 
 Note:
-The read function will only be called once for each test case.
+The read function will only be called once for each Snake_3 case.
 */
 
 /* The read4 API is defined in the parent class Reader4.
