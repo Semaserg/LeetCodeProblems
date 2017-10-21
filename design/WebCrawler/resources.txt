@@ -1,0 +1,12 @@
+https://stackoverflow.com/questions/9825798/how-to-read-a-text-from-a-web-page-with-java
+http://skilledcoder.blogspot.com/
+http://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones
+http://highscalability.com/blog/category/example
+https://highlyscalable.wordpress.com/category/fundamentals/
+https://www.infoq.com/presentations/Facebook-News-Feed
+http://www.dialogex.com.ua/hello-world
+http://winterbe.com/posts/2015/05/22/java8-concurrency-tutorial-atomic-concurrent-map-examples/
+http://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-examples/
+https://stackoverflow.com/questions/10444722/opening-a-full-web-page-by-using-java
+https://stackoverflow.com/questions/3549890/how-to-programmatically-access-web-page-in-java
+http://www.dialogex.com.ua/hello-world
