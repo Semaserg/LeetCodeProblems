@@ -7,7 +7,6 @@ import java.util.Arrays;
  * 16. 3Sum Closest
  * https://leetcode.com/problems/3sum-closest/
 
- Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
  Given an array S of n integers, find three integers in S such that the sum is closest to a given number, target.
  Return the sum of the three integers. You may assume that each input would have exactly one solution.
 
