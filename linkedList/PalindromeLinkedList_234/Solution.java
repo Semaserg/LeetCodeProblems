@@ -24,7 +24,7 @@ public class Solution {
     // https://discuss.leetcode.com/topic/37978/the-fastest-two-solutions-space-cost-o-n-and-o-1-in-c-with-comments
     // Great explanation
     // https://discuss.leetcode.com/topic/18293/11-lines-12-with-restore-o-n-time-o-1-space
-    public boolean isPalindrome(ListNode head) {
+    public boolean isPalindrome1(ListNode head) {
         if (head == null || head.next == null) return true;
         // 1. find length
         int len = 0;
@@ -54,6 +54,25 @@ public class Solution {
             } else {
                 return false;
             }
+        }
+        return true;
+    }
+
+    public boolean isPalindrome(ListNode head) {
+        if (head == null || head.next == null) return true;
+        ListNode walker = head, runner = head, prev = null;
+        while(runner != null && runner.next != null) {
+            runner = runner.next.next;
+            ListNode next = walker.next;
+            walker.next = prev;
+            prev = walker;
+            walker = next;
+        }
+        if (runner != null) walker = walker.next;
+        while(prev != null) {
+            if (prev.val != walker.val) return false;
+            prev = prev.next;
+            walker = walker.next;
         }
         return true;
     }
