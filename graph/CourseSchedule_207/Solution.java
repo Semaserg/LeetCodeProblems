@@ -52,6 +52,32 @@ Topological sort could also be done via BFS.
 //        http://www.geeksforgeeks.org/topological-sorting/ - topological sort via DFS
 //        http://www.geeksforgeeks.org/topological-sorting-indegree-based-solution/
 public class Solution {
+    public boolean canFinish2(int numCourses, int[][] prerequisites) {
+        if (numCourses == 0 || prerequisites == null) return false;
+        List<Integer>[] g = makeGraph(numCourses, prerequisites);
+        boolean[] visited = new boolean[numCourses];
+        boolean[] recStack = new boolean[numCourses];
+        for (int i=0; i<numCourses; i++) {
+            if (!visited[i]) {
+                if (isCycle(g, i, visited, recStack)) return false;
+            }
+        }
+        return true;
+    }
+    private boolean isCycle(List<Integer>[] g, int curr, boolean[] visited, boolean[] recStack) {
+        if (recStack[curr]) return true;
+        if (visited[curr]) return false;
+        recStack[curr] = true;
+        visited[curr] = true;
+        for (int i : g[curr]) {
+            if (recStack[i]) return true;
+            if (visited[i]) continue;
+            if (isCycle(g, i, visited, recStack)) return true;
+        }
+        recStack[curr] = false;
+        return false;
+    }
+
     // DFS, time complexity O(E+V), E = num of edges, V - num of vertices.
     // Space complexity O(E+V) - to hold graph + O(V) - visited, +  O(V) -recStack +
     // O(E) - max for recursion stack => O(2E + 3V) = O(E + V).
