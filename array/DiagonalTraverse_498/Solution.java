@@ -48,6 +48,42 @@ public class Solution {
         return arr;
     }
 
+    public int[] findDiagonalOrder1(int[][] matrix) {
+        if (matrix == null) throw new IllegalArgumentException("ex");
+        if (matrix.length == 0 || matrix[0].length == 0) return new int[]{};
+        int m = matrix.length, n = matrix[0].length;
+        int[] res = new int[m*n];
+        int step = 1, r=0, c=0;
+        for (int i=0; i<m*n; i++) {
+            res[i] = matrix[r][c];
+            r += -1 * step;
+            c += step;
+            // bottom border
+            if (r == m) {
+                step *= -1;
+                r = m-1;
+                c += 2;
+            }
+            // right border
+            if (c == n) {
+                step *= -1;
+                c = n-1;
+                r += 2;
+            }
+            // top border
+            if (r < 0) {
+                step *= -1;
+                r = 0;
+            }
+            // left border
+            if (c < 0) {
+                step *= -1;
+                c = 0;
+            }
+        }
+        return res;
+    }
+
 //    https://discuss.leetcode.com/topic/77865/concise-java-solution
 //    public class Solution {
 //        public int[] findDiagonalOrder(int[][] matrix) {
