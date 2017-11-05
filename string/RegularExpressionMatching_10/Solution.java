@@ -26,62 +26,32 @@ isMatch("ab", ".*") → true
 isMatch("aab", "c*a*b") → true
 */
 public class Solution {
-    // Time Limit Exceeded
     public boolean isMatch(String s, String p) {
         if (s == null || p == null) throw new IllegalArgumentException("ex");
-        if (p.length() == 0) return s.length() == 0;
-
-        return helper(s, 0, p, 0);
-    }
-
-    private boolean helper(String s, int sIndex, String p, int pIndex) {
-        if (sIndex == s.length() && pIndex == p.length()) return true;
-        if (pIndex == p.length() && sIndex != s.length()) {
-            System.out.println("pattern is over fail: sIndex=" + sIndex);
-            return false; // string is not over but pattern is over
+        int m = s.length()+1, n = p.length()+1;
+        boolean[][] dp = new boolean[m][n];
+        dp[0][0] = true;
+        // fill first row
+        for (int i=1; i<n; i++) {
+            int pCurr = p.charAt(i-1);
+            if (i >= 2 && pCurr == '*') {
+                dp[0][i] = dp[0][i-2]; // not prev, but prev-prev, because * can just remove the character
+            }
         }
-        if (pIndex != p.length() && sIndex == s.length()) { // string is over but pattern is not
-            return restOfPatternMatchEmptyString(p, pIndex);
-        }
-
-        char strChar = s.charAt(sIndex);
-        char patternChar = p.charAt(pIndex);
-
-        if (isStar(p, pIndex)) {
-            if (patternChar == '.') patternChar = strChar; // .*
-            if (patternChar != strChar) { // no matches for x* pattern, keep going
-                return helper(s, sIndex, p, pIndex+2);
-            } else {
-                if (helper(s, sIndex, p, pIndex+2)) return true;
-                while (patternChar == strChar) { // run x* pattern check for each position in string where pattern char equals strung char
-                    boolean isValidCurrPattern = helper(s, sIndex + 1, p, pIndex); // check *x pattern for next pos
-                    boolean isValidNextPattern = helper(s, sIndex + 1, p, pIndex + 2); // check next pattern for next pos
-                    if (isValidCurrPattern || isValidNextPattern) return true;
-
-                    sIndex++;
-                    if (sIndex == s.length()) break;
-                    else strChar = s.charAt(sIndex);
+        // first col is false by default excluding dp[0][0]
+        for (int i=1; i<m; i++) {
+            for (int j=1; j<n; j++) {
+                int sInd = i-1, pInd = j-1;
+                if (s.charAt(sInd) == p.charAt(pInd) || p.charAt(pInd) == '.') {
+                    dp[i][j] = dp[i-1][j-1];
+                } else if (p.charAt(pInd) == '*') {
+                    if (pInd-1 < 0) throw new IllegalStateException("* should be after some character");
+                    boolean checkChar = s.charAt(sInd) == p.charAt(pInd-1) || p.charAt(pInd-1) == '.';
+                    boolean c = checkChar && (dp[i-1][j] || dp[i][j-1]);
+                    dp[i][j] = c || dp[i][j-2];
                 }
             }
-        } else if (patternChar == '.' || patternChar == strChar) {
-            return helper(s, sIndex+1, p, pIndex+1);
         }
-        System.out.println("no match fail: patternChar=" + patternChar + "; strChar=" + strChar);
-        return false;
-    }
-
-    private boolean isStar(String p, int pIndex) {
-        return pIndex <= p.length()-2 && p.charAt(pIndex+1) == '*';
-    }
-
-    private boolean restOfPatternMatchEmptyString(String p, int pIndex) {
-        while (pIndex < p.length()) {
-            if (isStar(p, pIndex)) pIndex +=2;
-            else  {
-                System.out.println("restOfPatternMatchEmptyString fail: pIndex=" + pIndex);
-                return false;
-            }
-        }
-        return true;
+        return dp[m-1][n-1];
     }
 }
