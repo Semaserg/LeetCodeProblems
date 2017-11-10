@@ -29,7 +29,7 @@ public class Graph {
         res.add(current);
         for (int i : adjList[current]) {
             if (!visited[i]) {
-                visited[i] = true;
+                //visited[i] = true;
                 res.add(i);
             }
         }
