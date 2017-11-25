@@ -25,6 +25,7 @@ isMatch("aa", ".*") → true
 isMatch("ab", ".*") → true
 isMatch("aab", "c*a*b") → true
 */
+// https://www.youtube.com/watch?v=l3hda49XcDE
 public class Solution {
     public boolean isMatch(String s, String p) {
         if (s == null || p == null) throw new IllegalArgumentException("ex");
@@ -45,7 +46,7 @@ public class Solution {
                 if (s.charAt(sInd) == p.charAt(pInd) || p.charAt(pInd) == '.') {
                     dp[i][j] = dp[i-1][j-1];
                 } else if (p.charAt(pInd) == '*') {
-                    if (pInd-1 < 0) throw new IllegalStateException("* should be after some character");
+                    if (pInd == 0) throw new IllegalStateException("* should be after some character");
                     boolean checkChar = s.charAt(sInd) == p.charAt(pInd-1) || p.charAt(pInd-1) == '.';
                     boolean c = checkChar && (dp[i-1][j] || dp[i][j-1]);
                     dp[i][j] = c || dp[i][j-2];
