@@ -1,5 +1,6 @@
 package LeetCode.array.LongestConsecutiveSequence_128;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Set;
@@ -43,7 +44,7 @@ public class Solution {
     // O(n) time complexity
     // https://discuss.leetcode.com/topic/15383/simple-o-n-with-explanation-just-walk-each-streak
     // https://discuss.leetcode.com/topic/25493/simple-fast-java-solution-using-set
-    public int longestConsecutive(int[] nums) {
+    public int longestConsecutive2(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for(int num : nums) {
             set.add(num);
@@ -60,6 +61,22 @@ public class Solution {
                 }
                 if (localMax > max) max = localMax;
             }
+        }
+        return max;
+    }
+
+    public int longestConsecutive(int[] nums) {
+        Set<Integer> set = new HashSet();
+        for(int num : nums) {
+            set.add(num);
+        }
+        int max = 0;
+
+        for (int i : nums) {
+            if (set.contains(i-1)) continue;
+            int j = i;
+            while(set.contains(j)) j++;
+            max = Math.max(max, j-i);
         }
         return max;
     }
