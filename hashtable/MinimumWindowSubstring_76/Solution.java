@@ -41,7 +41,7 @@ public class Solution {
             }
 
             // if we found all the chars from t, start moving left till we lost some of the chars from t.
-            // In this moment we leave the "while" loop and continue moving the right bound till we gat all the
+            // In this moment we leave the "while" loop and continue moving the right bound till we get all the
             // chars from t again.
             while (count == t.length()) {
                 if (right-left+1 < minLen) {

@@ -33,7 +33,7 @@ public class Solution {
                 dp[i] += dp[i-1];
             }
             if (second >=10 && second<=26) {
-                dp[i] += dp[i-1];
+                dp[i] += dp[i-2];
             }
         }
         return dp[len];

@@ -32,8 +32,53 @@ import java.util.*;
 */
 
 class Solution {
-
     public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        Set<String> bset = new HashSet<>(Arrays.asList(beginWord));
+        Set<String> eset = new HashSet<>(Arrays.asList(endWord));
+        Set<String> visited = new HashSet<>(Arrays.asList(beginWord, endWord));
+        Set<String> dict = new HashSet<>(wordList);
+
+        int pathLen = 2;
+        while (!bset.isEmpty() && !eset.isEmpty()) {
+            if (bset.size() > eset.size()) {
+                Set<String> temp = bset;
+                bset = eset;
+                eset = temp;
+            }
+
+            Set<String> t = new HashSet<>(bset);
+            t.retainAll(eset);
+            if (t.size() > 0) return pathLen;
+            bset = buildNextLayer(dict, bset, visited);
+            pathLen++;
+        }
+        return -1;
+    }
+
+    private Set<String> buildNextLayer(Set<String> wordList, Set<String> currLayer, Set<String> visited) {
+        Set<String> nextLayer = new HashSet<>();
+        for(String s : currLayer) {
+            char[] charArr = s.toCharArray();
+            for (int i=0; i<charArr.length; i++) {
+                char orig = charArr[i];
+                for (char c = 'a'; c <= 'z'; c++) {
+                    charArr[i] = c;
+                    String candidate = new String(charArr);
+                    if (wordList.contains(candidate)) {
+                        if (!visited.contains(candidate)) {
+                            nextLayer.add(candidate);
+                            visited.add(candidate);
+                        }
+                    }
+                }
+                charArr[i] = orig;
+            }
+        }
+        return nextLayer;
+    }
+
+
+    public int ladderLength1(String beginWord, String endWord, List<String> wordList) {
         Map<String, Set<String>> g = buildGraph(beginWord, endWord, wordList);
         return bfs(beginWord, endWord, g);
     }
