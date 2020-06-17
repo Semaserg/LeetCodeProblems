@@ -15,6 +15,7 @@ class Main {
         String[] beginners = new String[]{
                 "telegram:	@user4	; InterviewPerDay:	1	;	Fri: -; Sat:18-19; Sun: 18-19; Mon: 16-17; Tue: -; Wed: -; Thu: -;	",
                 "telegram:	@user5	; InterviewPerDay:	2	;	Fri:17-21;Sat:17-21;Sun:17-21;Mon:17-21;Tue:17-21;Wed:17-21;Thu:17-21;	",
+                "telegram:	@user6	; InterviewPerDay:	3	;	Fri: -; Sat: 9-23; Sun: 9-23; Mon: -; Tue: -; Wed: -; Thu: -;	",
         };
 
         List<Timetable> timetableCandidates = solution.generateTimetableCandidates(beginners);
